@@ -1,0 +1,5 @@
+node_modules
+Blood_Banking_System_MobileEnd/node_modules
+Blood_Banking_System_MobileEnd/.gitignore
+Blood_Banking_SystemMobileEnd/dist/
+Blood_Banking_System_MobileEnd/build/
