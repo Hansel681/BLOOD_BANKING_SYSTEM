@@ -4,3 +4,4 @@ async function includeHTML(elementId, file) {
   document.getElementById(elementId).innerHTML = htmlContent;
 }
 includeHTML('hansel','/pages/home_Pride.html');
+includeHTML('pride','/pages/pride_page.html');
