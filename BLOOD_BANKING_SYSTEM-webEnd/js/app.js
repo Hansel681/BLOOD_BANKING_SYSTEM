@@ -5,3 +5,4 @@ async function includeHTML(elementId, file) {
 }
 includeHTML('hansel','/pages/home_Pride.html');
 includeHTML('kelly','/pages/kelly_page.html');
+includeHTML('pride','/pages/pride_page.html');
