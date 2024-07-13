@@ -1,3 +1,9 @@
 #kelly {
   background-color: red;
 }
+  .body {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
