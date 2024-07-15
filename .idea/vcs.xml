@@ -2,9 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-<<<<<<< HEAD
-=======
-    <mapping directory="$PROJECT_DIR$/BLOOD_BANKING_SYSTEM" vcs="Git" />
->>>>>>> 8e435b973ea3b846d884d933375e96c79e4ecd56
   </component>
 </project>
