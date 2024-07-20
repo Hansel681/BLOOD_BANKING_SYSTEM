@@ -1,25 +1,42 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+#pascal{
+	font-family: Arial,sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: rgb(23, 168, 216);
 
-header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-
-.discover-link {
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: #d40e0e;
-    color: #fff;
-    border-radius: 5px;
+.header{
+	text-align: center;
+	padding: 20;
+	background-color: blue;
+	color: white;
 }
-
-.discover-link:hover {
-    background-color: #d20f0f;
+.container{
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	padding: 20px;
+	
+}
+.row{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+.box{
+	flex: 0 1 30%;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	text-align: center;
+	margin: 10px;
+	padding: 20px;
+}
+.box img{
+	width: 100%;
+	height: 90%;
+	border-bottom: 1px solid #dddddd;
+}
+.box p{
+	margin: 10px 0;
 }
