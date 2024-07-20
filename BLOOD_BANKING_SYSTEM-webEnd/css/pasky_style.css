@@ -1,24 +1,22 @@
-#pascal{
+#pasky{
 	font-family: Arial,sans-serif;
 	margin: 0;
 	padding: 0;
-	background-color: rgb(23, 168, 216);
-
 }
-.header{
+.header_pasky{
 	text-align: center;
 	padding: 20;
-	background-color: blue;
+	background-color: rgb(191, 0, 0);
 	color: white;
 }
-.container{
+.container_pasky{
 	display: flex;
 	align-items: center;
     justify-content: center;
 	padding: 20px;
 	
 }
-.row{
+.row_pasky{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
