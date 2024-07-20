@@ -3,11 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Login Page</title>
   <link rel="stylesheet" href="./../../css/authentication/login.css">
 </head>
 <body>
 <p class="login">login page</p>
 <script src="./../../js/authentication/login.js"></script>
+<div class="login container">
+  <h2>Login</h2>
+  <form action="/login" method="post">
+    <input type="text" name="Full name" placeholder="Full name" required maxlength="300">
+    <input type="password" name="password" required placeholder="Password">
+    <button>Submit</button>
+  </form>
+</div>
 </body>
 </html>
