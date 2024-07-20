@@ -1,1 +1,19 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #fff;
+}
 
+.doctors_picture {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.doctor_picture {
+
+}
