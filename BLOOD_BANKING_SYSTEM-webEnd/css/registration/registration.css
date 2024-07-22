@@ -1,6 +1,6 @@
 body {
 	font-family: Arial, sans-serif;
-	background-image: url(donating.jpg); 
+	background-image: url("../../img/donating.jpg");
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -18,7 +18,7 @@ body {
     padding: 20px;
     border: 1px solid #bc0202;
     border-radius: 8px;
-    background-color: transparent;
+    background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	justify-content: center;
 }
