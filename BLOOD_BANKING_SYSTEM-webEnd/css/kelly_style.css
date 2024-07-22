@@ -1,19 +1,49 @@
-main {
-  display: flex;
-  flex-wrap: wrap;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+.background_color_kelly {
+  background-color: lightblue !important;
+}
+
+header {
+  font-style: italic;
+  color: white;
+  font-size: 20px;
+  text-align: center;
   padding: 20px;
-  background-color: #fff;
 }
 
-.doctors_picture {
+.horizontal-layout_kelly {
   display: flex;
-  justify-content: space-around;
-  gap: 10px;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 20px;
   justify-content: center;
+}
+
+.feature_kelly {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-
+  gap: 10px;
+  min-width: 250px;
+  flex: 0 0 auto;
 }
 
-.doctor_picture {
-
+.text_kelly {
+  text-align: center;
+  max-width: 200px;
 }
+
+.image_kelly {
+  max-width: 200px;
+}
+
+.image_kelly img {
+  max-width: 100%;
+  height: auto;
+}
+
