@@ -1,119 +1,267 @@
-body{
-    background-image:linear-gradient(to top,rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%),
-    url();
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    background-position: center;
-  }
-.header {
-  background-color: #0a64be;
+/* Header section */
+.header_hansel {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
-  padding: 20px 0;
-  text-align: center;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
 }
 
-    .header-content {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #ff0080;
-    }
-  .logo {
-    margin-left: -60px;
-    font-size: 24px;
+.logo_hansel {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.dropbtn {
+  background-color: #cacdd1;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.dropbtn:hover {
+  background-color: #007bff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.login-link_hansel {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid gray;
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+  border-radius: 9px;
+}
+
+.signup-link_hansel {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid gray;
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+}
+
+.profile_hansel {
+  display: flex;
+  align-items: center;
+}
+
+.profile_hansel img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Hero section */
+.hero_hansel {
+  background-image: url("../img/hansel_img/navbar_hansel.jpg");
+  background-size: 1200px 500px;
+  background-position: center;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #f2f2f2;
+}
+
+.hero_hansel h1 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hero_hansel h2 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.search_form_hansel {
+  margin-bottom: 20px;
+}
+
+.search_form_hansel input {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.search_form_hansel button {
+  padding: 5px 10px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+}
+
+/* Offers section */
+.offers_hansel {
+  text-align: center;
+  padding: 20px;
+  border: none;
+}
+
+.offers_hansel h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.view_all_button_hansel {
+  padding: 5px 10px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  margin-bottom: 10px;
+}
+.actions {
+  text-align: center;
+}
+
+.actions button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #0056b3;
+}
+
+/* Process section */
+.process_hansel {
+  background-color: #ffffff;
+  padding: 20px;
+  border: none;
+}
+
+.process_hansel h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.process_step_hansel {
+  text-align: center;
+  display: inline-block;
+  width: 20%;
+  margin-bottom: 20px;
+  vertical-align: top;
+  margin-left: 50px;
+}
+
+.process_step_hansel img {
+  width: 250px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.process_step_hansel h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.process_step_hansel p {
+  font-size: 14px;
+  color: #666666;
+}
+.offers_hansel img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.box-container_hansel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box_hansel {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin: 10px;
+    width: 250px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.box_hansel img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.rating_hansel {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.star_hansel {
+    color: #ffc107;
+    font-size: 20px;
+    margin: 0 2px;
+}
+
+.details-btn_hansel {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 20px;
-  }
-  .logo:hover {
-      opacity: 0.5;
-    }
-    .logo:active {
-      opacity: 4;
-    }
-        .dropdown {
-          position: relative;
-          display: inline-block;
-        }
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transition: background-color 0.3s ease;
+}
 
-        .dropbtn {
-          background-color: #ee0c90;
-          color: white;
-          padding: 10px 20px;
-          font-size: 16px;
-          border: none;
-          cursor: pointer;
-          transition: background-color 0.3s;
-          margin-top: 100px;
-          margin: 20px;
-
-          margin-right: 5px;
-          border-radius: 20px;
-        }
-
-        .dropbtn:hover {
-          background-color: #007bff;
-        }
-
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          cursor: pointer;
-          box-shadow: 0px 8px 16px 0px rgb(163, 29, 29);
-          z-index: 1;
-        }
-
-        .dropdown-content a {
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-          transition: background-color 0.3s;
-        }
-
-        .dropdown-content a:hover {
-          background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-          display: block;
-        }
-    .login-button {
-      background-color: red;
-      color: white;
-      border-radius: 30px;
-      cursor: pointer;
-      width: 100px;
-      height: 50px;
-      margin-left: 70px;
-
-
-    }
-        .create-account-link{
-          color: blue;
-          font-size: 20px;
-          margin-left: 800px;
-        }
-      .table{
-        align-items: center;
-        text-align: center;
-        font-size: 1.5rem;
-      }
-      .th_header{
-        color: white;
-        background-color: red;
-      }
-      .tb_column_titl{
-        
-      }
-      .tb_1{
-        margin-left: 90px;    
-        }
-    
+.details-btn_hansel:hover {
+    background-color: #0056b3;
+}
