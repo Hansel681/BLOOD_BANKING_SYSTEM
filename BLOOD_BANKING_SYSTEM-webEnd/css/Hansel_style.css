@@ -239,14 +239,15 @@
 
 .rating_hansel {
     display: flex;
-    justify-content: center;
-    margin: 10px 0;
+    margin-bottom: 9px;
 }
 
 .star_hansel {
+  display: flex;
     color: #ffc107;
     font-size: 20px;
     margin: 0 2px;
+
 }
 
 .details-btn_hansel {
