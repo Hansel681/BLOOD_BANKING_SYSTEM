@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors')
 const { Sequelize, DataTypes } = require('sequelize');
-cont app = express()
+const app = express()
 
 const sequelize = new Sequelize({
   dialect: 'sqlite',
