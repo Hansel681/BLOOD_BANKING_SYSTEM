@@ -3,19 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <link rel="stylesheet" href="./../../css/authentication/login.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="./login.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-<p class="login">login page</p>
-<script src="./../../js/authentication/login.js"></script>
-<div class="login container">
-  <h2>Login</h2>
-  <form action="/login" method="post">
-    <input type="text" name="Full name" placeholder="Full name" required maxlength="300">
-    <input type="password" name="password" required placeholder="Password">
-    <button>Submit</button>
-  </form>
+<div id="form_container">
+  <div id="form_left">
+    <img src="../../img/img%20blood%20login.png" alt="bloodtransfer">
+  </div>
+  <div id="form_right">
+    <h1>login</h1>
+    <div class="input_container">
+      <i class="fas fa-envelope"></i>
+      <input placeholder="Email" type="email" name="Email" id="field_email" class="input_field">
+    </div>
+    <div class="input_container">
+      <i class="fas fa-lock"></i>
+      <input placeholder="Password" type="password" name="password" id="field_password" class="input_field">
+    </div>
+    <input type="submit" value="login" id="input_submit" class="input_field">
+    <span>Forgot <a href="#"> Username / Password ?</a></span>
+    <span id="create_account">
+            <a href="#"> Create new account</a>
+        </span>
+  </div>
 </div>
+
 </body>
 </html>
+
+
+
+
