@@ -1,22 +1,7 @@
-<style>
-    .image-container {
-      position: relative;
-      display: inline-block;
-    }
-
-    .image-container img {
-      display: block;
-      width: 600px;
-      height: auto;
-    }
-
-    .details-button {
-      position: absolute;
-      bottom: 100px;
-      right: 1100px;
-      padding: 5px 10px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+.info-box {
+    background-color: #fff;
+    padding: 20px;
+    width: 23%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
