@@ -1,0 +1,296 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.nav {
+  width: 100%;
+  margin-bottom: auto;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  display: block;
+  border-radius: 5px;
+}
+
+.nav a:hover {
+  background-color: #444;
+}
+
+.sign-out {
+  color: #ff6b6b;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ecf0f1;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+.top-bar input {
+  padding: 5px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #2196f3;
+}
+
+input:checked+.slider:before {
+  transform: translateX(14px);
+}
+
+.top-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.welcome {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-img {
+  width: 50px;
+  height: 50px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.progress-list,
+.activities-list,
+.staff-list,
+.document-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.progress-item,
+.activity-item,
+.staff-item,
+.document-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.activity-item .activity-date,
+.staff-item img,
+.document-item img {
+  margin-right: 10px;
+}
+
+.activity-item .activity-date,
+.staff-item img,
+.document-item img {
+  width: 40px;
+  height: 40px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.progress-bar {
+  flex: 1;
+  background-color: #ddd;
+  border-radius: 5px;
+  position: relative;
+  height: 20px;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+.progress-percentage {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-weight: bold;
+}
+
+.attendance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attendance .date {
+  margin: 0 10px;
+}
+
+.prev-date,
+.next-date {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.see-all {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.see-all:hover {
+  text-decoration: underline;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .sidebar {
+  background-color: #444;
+}
+
+.dark-mode .main-content {
+  background-color: #222;
+}
+
+.dark-mode .welcome,
+.dark-mode .card {
+  background-color: #444;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+}
