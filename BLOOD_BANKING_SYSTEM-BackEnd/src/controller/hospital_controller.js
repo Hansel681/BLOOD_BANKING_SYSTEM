@@ -1,8 +1,8 @@
-const dbconnection = require('../database_config');
+const dbconnection = require('../database');
 
 exports.getallhospitals = async(req,res) => {
     try {
-        const hospitals = await dbconnection.query('SELECT * FROM hospital');
+        const hospital = await dbconnection.query('SELECT * FROM hospital');
         res.status(200).send({
             success: true,
             data: hospital[0],
@@ -18,7 +18,7 @@ exports.getallhospitals = async(req,res) => {
 }
 exports.saveHospital = async(req,res) => {
     try {
-        let {name, sex} =req.body;
+        let {name, address} =req.body;
         const hospital = await dbconnection.query(
             "INSERT INTO hospital(name,address) VALUES(?, ?)", [name, address]);
             res.status(201).send({
