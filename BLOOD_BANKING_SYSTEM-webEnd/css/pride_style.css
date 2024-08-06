@@ -2,11 +2,13 @@
   font-size: 25px;
   color: #172B4D;
   margin: 10px 5px;
+  background-color: rgb(241, 103, 103);
+
 }
 .footer-section {
-  background-color: indianred;
   height: 450px;
   width: auto;
+  margin-bottom: 30px;
 }
   .footer-section h2{
   font-size: xxx-large;
@@ -16,14 +18,6 @@
     align-items: center;
     margin-left: 40px;
   }
-.footer-section h3{
-  font-size: xx-large;
-  background-color: #dddddd;
-  color: black;
-  display: inline-block;
-  height: 50px;
-  margin-left: 30px;
-}
   .footer-section img {
     height: 300px;
     width: 400px;
@@ -32,16 +26,45 @@
       margin-right: 35px;
 
     }
-
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+  }
+  
+  .footer-section {
+      flex: 1;
+      min-width: 200px;
+      padding: 20px;
+  }
+  
+  .footer-section h2 {
+      margin-top: 0;
+      color: rgb(34, 33, 33);
+  }
+  
+  .footer-section a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+  }
+  
+  .footer-section a:hover {
+      text-decoration: underline;
+  }
+  .footer-col .social-links h3 {
+    color:  rgb(34, 33, 33);
+  }
     .footer-col .social-links a {
       display: inline-block;
       height: 40px;
       width: 40px;
-      background-color: #f6f7f9;
+      background-color: indianred;
       text-align: center;
       line-height: 40px;
       border-radius: 50px;
-      color: indianred;
+      color: white;
       margin: 0 10px 10px 100px;
     }
 
@@ -56,13 +79,15 @@
 }
     .copyright-area {
       background: #555555;
-      padding: 25px;
+      padding: 30px;
+      width: 100vw;
     }
 
     .copyright-text p {
       margin: 0;
       font-size: 14px;
       color: #888888;
+      text-align: center;
     }
 
     .copyright-text p a {
@@ -70,8 +95,11 @@
     }
 
     .footer-menu li {
-      display: inline-block;
-      margin: 50px;
+      display: inline;
+      margin-right: 150px;
+      margin-left: 30px;
+      text-align: center;
+      justify-content: center;
     }
 
     .footer-menu li:hover a {
