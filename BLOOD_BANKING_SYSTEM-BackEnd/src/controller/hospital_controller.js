@@ -37,10 +37,10 @@ res.status(500).send({
 }
 exports.updateHospital = async(req,res) => {
     try {
-        let {name, sex} =req.body;
+        let {name, address } =req.body;
         let id = req.query.id
         const hospital = await dbconnection.query(
-            "UPDATE hospital SET name = ?,address = ? WHERE id = ? ",
+            "UPDATE hospital SET name = ?,address = ?,  WHERE id = ? ",
              [name, address, id]
             );
             res.status(201).send({
@@ -57,25 +57,24 @@ res.status(500).send({
 });
     }
 }
-exports.deleteHospital = async(req,res) => {
+exports.deleteHospital= async(req, res) => {
     try {
-        let {name, sex} =req.body;
-        let id = req.query.id
-        const hospital = await dbconnection.query(
-            "DELETE FROM hospital  WHERE id = ? ",
+        let id = req.params.id;
+        const student = await dbconnection.query(
+            "DELETE FROM marks WHERE id= ?",
              [id]
             );
-            res.status(200).send({
-                success: true,
-                data: Hospital,
-                message: 'successfully deleted'
-            })
-    } 
-    catch(error) {
-res.status(500).send({
-    success: false,
-    data: [],
-    message: error,stack
-});
+        res.status(200).send({
+            success: true,
+            data: mark,
+            message: 'Successfully Deleted '+id
+        });
+    } catch (error) {
+        res.status(500).send({
+            success: false,
+            data: [],
+            message: error.stack
+        });
     }
 }
+    
