@@ -3,3 +3,4 @@ BLOOD_BANKING_SYSTEM-MobileEnd/.gitignore
 BLOOD_BANKING_SYSTEM-MobileEnd/dist/
 BLOOD_BANKING_SYSTEM-MobileEnd/build/
 BLOOD_BANKING_SYSTEM-webEnd/node_modules
+BLOOD_BANKING_SYSTEM-BackEnd/node_modules
