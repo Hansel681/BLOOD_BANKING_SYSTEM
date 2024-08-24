@@ -1,25 +1,13 @@
-const dbconnection = require('../database')
+const express = require('express');
+const route = express.Router();
+const client_controller = require('../controller/client_controller');
 
-expports.getUser = async(req, res) => {
-    try {
-        const client = await dbconnection.query('SELECT * FROM client');
-        res.status(200).send({
-            success: true,
-            data: user[0],
-            message: 'Success'
-        });
-    } catch (error) {
-        res.status(500).send({
-            success: false,
-            data: [],
-            message: error.stack
-        });
-    }
-}
-    exports.saveUser = async(req, res) => {
-        try {
-           let {} 
-        } catch (error) {
-            
-        }
-    }
+route.get('/', client_controller.getClient);
+
+route.post('/',  client_controller.addClient);
+
+route.put('/', client_controller.updateClient);
+
+route.delete('/:id', client_controller.deleteClient);
+
+module.exports = route
