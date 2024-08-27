@@ -1,4 +1,4 @@
-const dbconnection = require('../database');
+const dbconnection = require('../../database');
 
 exports.getBloodgroup= async(req,res) => {
     try {
@@ -16,7 +16,7 @@ exports.getBloodgroup= async(req,res) => {
     })
     }
 }
-exports.addBloodrequest = async(req,res) => {
+exports.addBloodgroup = async(req,res) => {
     try {
         let {name} =req.body;
         const bloodgroup = await dbconnection.query(
@@ -35,7 +35,7 @@ res.status(500).send({
 });
     }
 }
-exports.updateBloodrequest= async(req,res) => {
+exports.updateBloodgroup= async(req,res) => {
     try {
         let {name} =req.body;
         let id = req.query.id
@@ -57,7 +57,7 @@ res.status(500).send({
 });
     }
 }
-exports.deleteBloodrequest= async(req, res) => {
+exports.deleteBloodgroup= async(req, res) => {
     try {
         let id = req.params.id;
         const bloodrequest = await dbconnection.query(
