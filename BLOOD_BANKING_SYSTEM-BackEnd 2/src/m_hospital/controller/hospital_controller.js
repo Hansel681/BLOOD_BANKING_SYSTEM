@@ -1,11 +1,11 @@
 const dbconnection = require('../../database');
 
-exports.getBloodbank= async(req,res) => {
+exports.getHospital = async(req,res) => {
     try {
-        const bloodbank = await dbconnection.query('SELECT * FROM bloodbank');
+        const hospital = await dbconnection.query('SELECT * FROM hospital');
         res.status(200).send({
             success: true,
-            data: bloodbank [0],
+            data: hospital[0],
             message: 'successfull'
         })
     } catch(error) {
@@ -16,36 +16,36 @@ exports.getBloodbank= async(req,res) => {
     })
     }
 }
-exports.addBloodbank = async(req,res) => {
+exports.addHospital = async(req,res) => {
     try {
         let {name} =req.body;
-        const bloodbank = await dbconnection.query(
-            "INSERT INTO bloodbank(name) VALUES(?)", [name]);
+        const hospital = await dbconnection.query(
+            "INSERT INTO hospital(name) VALUES(?)", [name]);
             res.status(201).send({
                 success: true,
-                data: bloodbank,
-                message: 'successfully added'
+                data: hospital,
+                message: 'successfully saved'
             })
     } 
     catch(error) {
 res.status(500).send({
     success: false,
     data: [],
-    message: error.stack
+    message: error,stack
 });
     }
 }
-exports.updateBloodbank= async(req,res) => {
+exports.updateHospital = async(req,res) => {
     try {
         let {name} =req.body;
         let id = req.query.id
-        const bloodbank= await dbconnection.query(
-            "UPDATE Bloodbank SET name = ? WHERE id = ? ",
-             [name]
+        const hospital = await dbconnection.query(
+            "UPDATE hospital SET name = ?,  WHERE id = ? ",
+             [name, id]
             );
             res.status(201).send({
                 success: true,
-                data: updateBloodbank[0],
+                data: updateHospital[0],
                 message: 'successfully updated'
             })
     } 
@@ -53,20 +53,20 @@ exports.updateBloodbank= async(req,res) => {
 res.status(500).send({
     success: false,
     data: [],
-    message: error.stack
+    message: error,stack
 });
     }
 }
-exports.deleteBloodbank= async(req, res) => {
+exports.deleteHospital= async(req, res) => {
     try {
         let id = req.params.id;
-        const bloodbank = await dbconnection.query(
-            "DELETE FROM bloodbank WHERE id= ?",
+        const hospital = await dbconnection.query(
+            "DELETE FROM hospital WHERE id= ?",
              [id]
             );
         res.status(200).send({
             success: true,
-            data: bloodbank,
+            data: hospital,
             message: 'Successfully Deleted '+id
         });
     } catch (error) {
