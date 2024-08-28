@@ -1,2 +1,14 @@
-.testimonial-container .testimonial{
+.info-boxes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    font size: 45
+}
+
+.info-box {
+    background-color: #ddd;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
