@@ -1,7 +1,0 @@
-{
-  "name": "BLOOD_BANKING_SYSTEM-MobileEnd",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
