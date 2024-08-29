@@ -1,13 +1,13 @@
 *body {
-  width: 100%;  /* Full width */
+  width: 100%; 
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 1200px; /* Maximum width for laptops */
-  margin: 0 auto;    /* Center the content */
+  max-width: 1200px;
+  margin: 0 auto;   
   padding: 20px;
 }
 
@@ -36,7 +36,6 @@ h1, p {
   height: auto;
 }
 
-/* Media Queries for Smaller Devices */
 
 /* Tablets (adjust layout for screens between 600px and 1024px) */
 @media (max-width: 1024px) {
