@@ -1,4 +1,4 @@
-const dbconnection = require('../database');
+const dbconnection = require('../../database');
 
 exports.getBloodrequest = async(req,res) => {
     try {
