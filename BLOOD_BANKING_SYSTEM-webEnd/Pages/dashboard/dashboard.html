@@ -7,135 +7,45 @@
   <link rel="stylesheet" href="./../../css/dashboard/dashboard.css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BloodAid</title>
+  <link rel="stylesheet" href="../../css/dashboard/dashboard.css">
+</head>
 <body>
-<div class="container">
-        <aside class="sidebar">
-            <div class="logo">BloodBank</div>
-            <nav class="nav">
-                <a href="#"><i class="fas fa-home"></i> Home</a>
-                <a href="#"><i class="fas fa-users"></i> People</a>
-                <a href="#"><i class="fas fa-hospital"></i> Hospital</a>
-                <a href="#"><i class="fas fa-file-alt"></i> Records</a>
-                <a href="#"><i class="fas fa-chart-bar"></i> Statistics</a>
-                <a href="#"><i class="fas fa-cogs"></i> Settings</a>
-                <a href="#"><i class="fas fa-briefcase-medical"></i> Staff Room</a>
-            </nav>
-            <a href="#" class="sign-out"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
-        </aside>
-        <main class="main-content">
-            <section class="top-bar">
-                <input type="text" placeholder="Search hospital document activities">
-                <label class="switch">
-                    <input type="checkbox" id="modeToggle">
-                    <span class="slider round"></span>
-                </label>
-                <i class="icon-notification"></i>
-                <i class="icon-setting"></i>
-                <img src="./../../img/dashboard/blood-bank-1.jpg" alt="Logo" class="top-logo">
-            </section>
-            <section class="welcome">
-                <h1>Welcome Back, Atud Hansel</h1>
-                <p>You have 50 new clients added to your domain.</p>
-                <img src="./../../img/dashboard/blood-bank-1.jpg" alt="check image" class="welcome-img">
-            </section>
-            <section class="stats">
-                <div class="card">
-                    <h3>Patient Statistic</h3>
-                    <canvas id="patientStatistic"></canvas>
-                </div>
-                <div class="card">
-                    <h3>Hospital Progress</h3>
-                    <div class="progress-list">
-                        <div class="progress-item">
-                            <h2>Hospital A</h2>
-                            <div class="progress-bar">
-                                <span style="width: 39%;"></span>
-                                <span class="progress-percentage">39%</span>
-                            </div>
-                        </div>
-                        <div class="progress-item">
-                            <h2>Hospital B</h2>
-                            <div class="progress-bar">
-                                <span style="width: 40%;"></span>
-                                <span class="progress-percentage">40%</span>
-                            </div>
-                        </div>
-                        <div class="progress-item">
-                            <h2>Hospital C</h2>
-                            <div class="progress-bar">
-                                <span style="width: 68%;"></span>
-                                <span class="progress-percentage">68%</span>
-                            </div>
-                        </div>
-                        <div class="progress-item">
-                            <h2>Hospital D</h2>
-                            <div class="progress-bar">
-                                <span style="width: 72%;"></span>
-                                <span class="progress-percentage">72%</span>
-                            </div>
-                        </div>
-                        <!-- Additional Progress Items -->
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Upcoming Activities</h3>
-                    <div class="activities-list">
-                        <div class="activity-item">
-                            <div class="activity-date">13</div>
-                            <p>Meeting with the VC</p>
-                            <p>09:00 AM</p>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-date">14</div>
-                            <p>Hospital Inspection</p>
-                            <p>11:00 AM</p>
-                        </div>
-                        <!-- Additional Activity Items -->
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Attendance</h3>
-                    <div class="attendance">
-                        <button class="prev-date">&lt;</button>
-                        <span class="date">Sept 2022</span>
-                        <button class="next-date">&gt;</button>
-                        <canvas id="attendanceChart"></canvas>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Staff Room</h3>
-                    <div class="staff-list">
-                        <div class="staff-item">
-                            <img src="./../../img/dashboard/blood-bank-1.jpg" alt="Staff">
-                            <p>Atud Hansel</p>
-                        </div>
-                        <div class="staff-item">
-                            <img src="./../../img/dashboard/blood-bank-1.jpg" alt="Staff">
-                            <p>Jane Doe</p>
-                        </div>
-                        <!-- Additional Staff Items -->
-                    </div>
-                    <a href="#" class="see-all">See All</a>
-                </div>
-                <div class="card">
-                    <h3>Documents</h3>
-                    <div class="document-list">
-                        <div class="document-item">
-                            <img src="./../../img/dashboard/blood-bank-1.jpg" alt="Document">
-                            <p>Blood Test Report</p>
-                        </div>
-                        <div class="document-item">
-                            <img src="./../../img/dashboard/blood-bank-1.jpg" alt="Document">
-                            <p>Donation Form</p>
-                        </div>
-                        <!-- Additional Document Items -->
-                    </div>
-                    <a href="#" class="see-all">See All</a>
-                </div>
-            </section>
-        </main>
+<section class="sidebar">
+  <div class="logo">
+    <img src="../../img/dashboard/logo image.jpg" alt="Logo">
+    <span>BloodAid</span>
+  </div>
+  <ul>
+    <li id="homeLink" class="active">Home</li>
+    <li id="donateLink">Donate</li>
+    <li id="notificationsLink">Notifications</li>
+    <li id="settingsLink">Setting</li>
+    <li id="helpLink">help</li>
+  </ul>
+  <div class="signOut">Sign Out</div>
+</section>
+<div class="main">
+  <section class="navbar">
+    <button id="sidebarToggle" class="sidebarToggle"> ☰</button>
+    <input type="text" placeholder="Search hospitals, Activity">
+    <div class="rightNavBar">
+      <div><span class="icon"></span></div>
+      <div><span class="icon"></span></div>
+      <div><span class="icon"></span></div>
+      <div><span class="icon"></span></div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./../../js/dashboard/dashboard.js"></script>
+  </section>
+  <section class="mainContent"></section>
+</div>
+<script src="./../../js/dashboard/dashboard.js">
+
+</script>
+
 </body>
 </html>

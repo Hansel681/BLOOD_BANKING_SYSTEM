@@ -14,18 +14,19 @@
   </div>
   <div id="form_right">
     <h1>login</h1>
+    <form action="/login" method="post">
     <div class="input_container">
       <i class="fas fa-envelope"></i>
-      <input placeholder="Email" type="email" name="Email" id="field_email" class="input_field">
+      <input placeholder="Email" type="email" name="Email" id="field_email" class="input_field" required>
     </div>
     <div class="input_container">
       <i class="fas fa-lock"></i>
-      <input placeholder="Password" type="password" name="password" id="field_password" class="input_field">
+      <input placeholder="Password" type="password" name="password" id="field_password" class="input_field" required>
     </div>
-    <input type="submit" value="login" id="input_submit" class="input_field">
+    <input type="submit" value="login" id="input_submit" class="input_field" required>
     <span>Forgot <a href="#"> Username / Password ?</a></span>
     <span id="create_account">
-            <a href="../.././Pages/registration/registration.html" </a>Create new account</a>
+            <a href="../.././Pages/registration/registration.html" <i>Create New Account</i></a>
         </span>
   </div>
 </div>
