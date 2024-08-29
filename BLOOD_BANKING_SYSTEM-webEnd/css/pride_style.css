@@ -15,7 +15,7 @@ body {
 }
 
 footer {
-  background-color: #333;
+  background-color: #6B0202;
   color: #fff;
   padding: 40px 0;
   text-align: center;
@@ -35,7 +35,7 @@ footer {
 
 .footer-section h2 {
   margin-top: 0;
-  color:  rgb(2, 194, 252);;
+  color:  #ffffff;
 }
 
 .footer-section a {
@@ -79,6 +79,6 @@ footer {
 
 .footer-menu li a {
   font-size: 14px;
-  color: rgb(2, 194, 252);
+  color: #ffffff
 }
 
