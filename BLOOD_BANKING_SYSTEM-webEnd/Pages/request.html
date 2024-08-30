@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Blood</title>
+    <link rel="stylesheet" href="../css/request.css">
+</head>
+<body>
+    <div class="request-container">
+        <h1>Request Blood</h1>
+        <p>Select a hospital and fill in your details to make a blood request.</p>
+
+        <form id="request-form">
+            <label for="hospital">Choose a hospital:</label>
+            <select id="hospital" name="hospital" required>
+                <option value="" disabled selected>Select a hospital</option>
+                <option value="hospital1">Yaounde Hospital</option>
+                <option value="hospital2">Douala Hospital</option>
+                <option value="hospital3"> Bamenda Hospital </option>
+            </select>
+
+            <div id="credentials-section" class="hidden">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+                <label for="bloodgroup">Bloodgroup:</label>
+                <input type="text" id="bloodgroup" name="blood type" placeholder="Your blood group" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Additional information or message" required></textarea>
+
+                <button type="submit">Send Request</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/request.js"></script>
+</body>
+</html>

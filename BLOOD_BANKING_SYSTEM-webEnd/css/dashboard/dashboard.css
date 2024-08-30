@@ -1,7 +1,7 @@
 :root {
   --red: #6b0202;
   --white: #FFFFFF;
-  --yellow: #FFB27D;
+  --yellow: #fffff;
   --backgroundColor: #ffffff;
   --black-face: #333;
 }
@@ -16,6 +16,16 @@ body {
   display: flex;
   font-family: Arial, sans-serif;
   background-color: var(--backgroundColor);
+}
+.welcome {
+  background-color: #6b0202;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sidebar {
