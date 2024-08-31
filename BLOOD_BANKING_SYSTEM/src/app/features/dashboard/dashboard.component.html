@@ -1,0 +1,105 @@
+<div class="flex">
+  <div class="bg-primary-background w-[10%] md:w-[15%] fixed top-0 left-0 h-screen">
+    <div class="mb-4 flex flex-col bg-red-700 p-4 items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+           stroke="currentColor"
+           class="size-6 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"/>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z"/>
+      </svg>
+      <h3 class="hidden md:block text-red-100"> Logo here</h3>
+    </div>
+    <ul class="flex flex-col space-y-2">
+      @for (menu of menu; track menu) {
+        <div
+          class="flex flex-row cursor-pointer p-4 hover:bg-red-200 hover:bg-opacity-10 transition-all duration-400 hover:text-red-100 items-center gap-4"
+          routerLinkActive="text-red-500 bg-red-200 bg-opacity-10"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="menu.routerLink"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+               stroke="currentColor"
+               class="size-6 text-red-100">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z"/>
+          </svg>
+          <li
+            class="hidden md:block text-red-100">
+            {{ menu.title }}
+          </li>
+        </div>
+      }
+    </ul>
+  </div>
+  <div class="ml-[10%] md:ml-[15%] lg:ml-[15%] lg:w-[70%] w-[90%] md:w-[85%]">
+    <header
+      class="flex p-4 fixed top-0 w-full max-w-[90%] lg:max-w-[70%] md:max-w-[85%] items-center bg-red-100 shadow justify-between">
+      <h4 class="justify-start">Dashboard</h4>
+      <div class="flex flex-row gap-4 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+             class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+             class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+             class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5"/>
+        </svg>
+        <img class="size-8 rounded-full" src="doctor.jpg">
+      </div>
+    </header>
+    <div class="rounded h-full bg-red-50 bg-opacity-30">
+      <div>Error zone</div>
+      <div class="mt-20 p-2 m-2 ">
+        <router-outlet/>
+      </div>
+    </div>
+  </div>
+  <div class="p-2 w-[15%] h-screen bg-red-50 shadow fixed top-0 right-0 hidden lg:flex flex-col justify-start">
+    <div class="flex flex-row bg-red-400 p-4 rounded w-full shadow">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+           class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
+      </svg>
+      <input class="bg-red-400 w-full" type="date">
+    </div>
+    <h3 class="text-primary-background font-bold mt-2">Next Collection</h3>
+    @for (collects of [1, 2, 3]; track collects) {
+      <div
+        class="w-full items-center gap-2 justify-between flex flex-row bg-purple-400 p-4 m-1 rounded shadow">
+        <div
+          class="bg-fuchsia-950 bg-opacity-20  text-sm  flex flex-col gap-0 m-0 items-center justify-center shadow rounded w-[50px] h-[50px]">
+          <span class="font-bold text-purple-100">15</span>
+          <span class="text-purple-100">Oct</span>
+        </div>
+        <div class="text-sm">
+          <div>Carefour</div>
+          <div class="font-bold">256 <span class="font-medium">Inc</span></div>
+
+        </div>
+        <div class="flex justify-end">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+               stroke="currentColor" class="h-6 w-6 text-purple-950">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+          </svg>
+        </div>
+      </div>
+    }
+    <div class="p-1">
+      <full-calendar
+        [options]="calendarOptions"
+        class="w-full h-full max-w-[200px] p-0 m-0 max-h-[300px]"
+      >
+      </full-calendar>
+    </div>
+  </div>
+</div>
