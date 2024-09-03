@@ -33,9 +33,9 @@
       }
     </ul>
   </div>
-  <div class="ml-[10%] md:ml-[15%] lg:ml-[15%] lg:w-[70%] w-[90%] md:w-[85%]">
+  <div class="ml-[10%] md:ml-[15%] lg:ml-[15%] lg:w-[80%] w-[90%] md:w-[85%]">
     <header
-      class="flex p-4 fixed top-0 w-full max-w-[90%] lg:max-w-[70%] md:max-w-[85%] items-center bg-red-100 shadow justify-between">
+      class="flex p-4 fixed top-0 w-full sm:max-w-[80%] max-w-[95%] lg:max-w-[85%] md:max-w-[85%] items-center bg-red-100 shadow justify-between">
       <h4 class="justify-start">Dashboard</h4>
       <div class="flex flex-row gap-4 items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -61,45 +61,6 @@
       <div class="mt-20 p-2 m-2 ">
         <router-outlet/>
       </div>
-    </div>
-  </div>
-  <div class="p-2 w-[15%] h-screen bg-red-50 shadow fixed top-0 right-0 hidden lg:flex flex-col justify-start">
-    <div class="flex flex-row bg-red-400 p-4 rounded w-full shadow">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-           class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
-      </svg>
-      <input class="bg-red-400 w-full" type="date">
-    </div>
-    <h3 class="text-primary-background font-bold mt-2">Next Collection</h3>
-    @for (collects of [1, 2, 3]; track collects) {
-      <div
-        class="w-full items-center gap-2 justify-between flex flex-row bg-purple-400 p-4 m-1 rounded shadow">
-        <div
-          class="bg-fuchsia-950 bg-opacity-20  text-sm  flex flex-col gap-0 m-0 items-center justify-center shadow rounded w-[50px] h-[50px]">
-          <span class="font-bold text-purple-100">15</span>
-          <span class="text-purple-100">Oct</span>
-        </div>
-        <div class="text-sm">
-          <div>Carefour</div>
-          <div class="font-bold">256 <span class="font-medium">Inc</span></div>
-
-        </div>
-        <div class="flex justify-end">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-               stroke="currentColor" class="h-6 w-6 text-purple-950">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
-          </svg>
-        </div>
-      </div>
-    }
-    <div class="p-1">
-      <full-calendar
-        [options]="calendarOptions"
-        class="w-full h-full max-w-[200px] p-0 m-0 max-h-[300px]"
-      >
-      </full-calendar>
     </div>
   </div>
 </div>
