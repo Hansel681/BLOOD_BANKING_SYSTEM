@@ -1,86 +1,83 @@
-  <div class="grid grid-cols-2">
-    <div class="col-xl-4">
-      <div class="card mb-4 mb-xl-0">
-        <div class="card-header">Profile Picture</div>
-        <div class="card-body text-center">
-          <!-- Profile picture image-->
-          <img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar1.png"
-               alt="">
-          <!-- Profile picture help block-->
-          <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
-          <!-- Profile picture upload button-->
-          <button class="btn btn-primary" type="button">Upload new image</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-8">
-      <!-- Account details card-->
-      <div class="card mb-4">
-        <div class="card-header">Account Details</div>
-        <div class="card-body">
-          <form>
-            <!-- Form Group (username)-->
-            <div class="mb-3">
-              <label class="small mb-1" for="inputUsername">Username (how your name will appear to other users on the
-                site)</label>
-              <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username"
-                     value="username">
-            </div>
-            <!-- Form Row-->
-            <div class="row gx-3 mb-3">
-              <!-- Form Group (first name)-->
-              <div class="col-md-6">
-                <label class="small mb-1" for="inputFirstName">First name</label>
-                <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name"
-                       value="Valerie">
-              </div>
-              <!-- Form Group (last name)-->
-              <div class="col-md-6">
-                <label class="small mb-1" for="inputLastName">Last name</label>
-                <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name"
-                       value="Luna">
-              </div>
-            </div>
-            <!-- Form Row        -->
-            <div class="row gx-3 mb-3">
-              <!-- Form Group (organization name)-->
-              <div class="col-md-6">
-                <label class="small mb-1" for="inputOrgName">Organization name</label>
-                <input class="form-control" id="inputOrgName" type="text" placeholder="Enter your organization name"
-                       value="Start Bootstrap">
-              </div>
-              <!-- Form Group (location)-->
-              <div class="col-md-6">
-                <label class="small mb-1" for="inputLocation">Location</label>
-                <input class="form-control" id="inputLocation" type="text" placeholder="Enter your location"
-                       value="San Francisco, CA">
-              </div>
-            </div>
-            <!-- Form Group (email address)-->
-            <div class="mb-3">
-              <label class="small mb-1" for="inputEmailAddress">Email address</label>
-              <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address"
-                     value="name@example.com">
-            </div>
-            <!-- Form Row-->
-            <div class="row gx-3 mb-3">
-              <!-- Form Group (phone number)-->
-              <div class="col-md-6">
-                <label class="small mb-1" for="inputPhone">Phone number</label>
-                <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number"
-                       value="555-123-4567">
-              </div>
-              <!-- Form Group (birthday)-->
-              <div class="col-md-6">
-                <label class="small mb-1" for="inputBirthday">Birthday</label>
-                <input class="form-control" id="inputBirthday" type="text" name="birthday"
-                       placeholder="Enter your birthday" value="06/10/1988">
-              </div>
-            </div>
-            <!-- Save changes button-->
-            <button class="btn btn-primary" type="button">Save changes</button>
-          </form>
-        </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="md:col-span-1">
+    <div class="bg-red-100 shadow rounded-lg p-4">
+      <div class="text-center">
+        <img class="w-32 h-32 rounded-full mx-auto mb-4" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+        <div class="text-sm text-gray-500 mb-4">JPG or PNG no larger than 5 MB</div>
+        <button class="bg-red-950 text-white py-2 px-4 rounded">Upload new image</button>
       </div>
     </div>
   </div>
+
+  <div class="md:col-span-1">
+    <div class="bg-red-100 shadow-lg rounded-lg p-6">
+      <div class="mb-6 font-semibold text-xl text-gray-800">Account Details</div>
+      <form>
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-700" for="inputUsername">Username</label>
+          <input
+            class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-200"
+            id="inputUsername" type="text" placeholder="Enter your username" value="username">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="inputFirstName">First name</label>
+            <input
+              class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-200"
+              id="inputFirstName" type="text" placeholder="Enter your first name" value="Valerie">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="inputLastName">Last name</label>
+            <input
+              class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-200"
+              id="inputLastName" type="text" placeholder="Enter your last name" value="Luna">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="inputOrgName">Organization name</label>
+            <input
+              class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-200"
+              id="inputOrgName" type="text" placeholder="Enter your organization name" value="Start Bootstrap">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="inputLocation">Location</label>
+            <input
+              class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-200"
+              id="inputLocation" type="text" placeholder="Enter your location" value="San Francisco, CA">
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-700" for="inputEmailAddress">Email address</label>
+          <input
+            class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-200"
+            id="inputEmailAddress" type="email" placeholder="Enter your email address" value="name@example.com">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="inputPhone">Phone number</label>
+            <input
+              class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-200"
+              id="inputPhone" type="tel" placeholder="Enter your phone number" value="555-123-4567">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="inputBirthday">Birthday</label>
+            <input
+              class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-200"
+              id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988">
+          </div>
+        </div>
+
+        <button
+          class="bg-primary-background text-white font-semibold py-2 px-6 rounded-md hover:bg-blue-700 transition duration-200">
+          Save changes
+        </button>
+      </form>
+    </div>
+  </div>
+
+</div>
