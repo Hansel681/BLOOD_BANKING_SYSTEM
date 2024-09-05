@@ -10,6 +10,7 @@ module.exports = {
           DEFAULT: '#B22222',
           light: '#CD5C5C',
           dark: '#8B0000',
+          background: '#160404',
         },
         secondary: {
           DEFAULT: '#F5F5F5',
@@ -37,21 +38,9 @@ module.exports = {
           dark: '#1976D2',
         },
       },
-      spacing: {
-        '72': '18rem',
-        '84': '21rem',
-        '96': '24rem',
-      },
-      borderRadius: {
-        'xl': '1rem',
-      },
       fontFamily: {
         sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
-      },
-      boxShadow: {
-        'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-        'xl': '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
       },
     },
   },

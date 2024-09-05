@@ -1,0 +1,34 @@
+/* Reduce the size of the day cells */
+.custom-mini-calendar .fc-daygrid-day {
+  padding: 0.25rem; /* Less padding inside each cell */
+  height: 1.5rem; /* Reduce the height of the cells */
+  width: 1.5rem; /* Reduce the width of the cells */
+}
+
+/* Adjust the font size for day numbers */
+.custom-mini-calendar .fc-daygrid-day-number {
+  font-size: 0.75rem; /* Smaller day number font size */
+}
+
+/* Adjust event font size and spacing */
+.custom-mini-calendar .fc-event {
+  font-size: 0.625rem; /* Smaller font size for events */
+  margin: 0.1rem; /* Reduce margin around events */
+  padding: 0.1rem; /* Reduce padding inside events */
+}
+/* styles.css or your component-specific stylesheet */
+.custom-mini-calendar .fc-daygrid-day {
+  padding: 0.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.custom-mini-calendar .fc-daygrid-day-number {
+  font-size: 0.75rem;
+}
+
+.custom-mini-calendar .fc-event {
+  font-size: 0.625rem;
+  margin: 0.1rem;
+  padding: 0.1rem;
+}
