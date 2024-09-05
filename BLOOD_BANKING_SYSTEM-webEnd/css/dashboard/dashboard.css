@@ -1,272 +1,154 @@
-:root {
-  --red: #6b0202;
-  --white: #FFFFFF;
-  --yellow: #FFB27D;
-  --backgroundColor: #ffffff;
-  --black-face: #333;
-}
-
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #f5f0ef;
 }
 
-body {
+.container {
   display: flex;
-  font-family: Arial, sans-serif;
-  background-color: var(--backgroundColor);
+  height: 100vh;
 }
 
 .sidebar {
-  background: var(--red);
-  height: 100vh;
-  width: 200px;
+  width: 20%;
+  background-color: #4a0e0b;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  left: 0;
-  top: 0;
-  transition: transform 0.3s ease;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.sidebar ul {
-  color: var(--white);
-  margin: 40px 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sidebar ul li {
-  padding: 15px 20px;
-  cursor: pointer;
-}
-
-.sidebar ul li:hover,
-.sidebar ul li.active {
-  background-color: var(--white);
-  color: var(--red);
-  transition: background-color 0.3s;
-}
-
-.signOut {
-  color: var(--yellow);
-  margin: 20px;
-  padding: 10px;
-  cursor: pointer;
+.sidebar.hidden {
+  transform: translateX(-100%);
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 30px 20px;
-  color: var(--white);
-  display: flex;
-  align-items: center;
+  font-size: 1.5em;
+  margin-bottom: 40px;
 }
 
-.logo img {
-  max-height: 40px;
-  margin-right: 10px;
-}
-
-.main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin-left: 200px;
-  transition: margin-left 0.3s ease;
-}
-
-.navbar {
-  background-color: var(--backgroundColor);
+.nav {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  align-items: center;
 }
 
-.sidebarToggle {
-  display: none;
+.nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-.rightNavBar {
-  display: flex;
-  gap: 15px;
+.nav-item {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.icon {
-  height: 20px;
-  width: 20px;
-  background-color: var(--red);
-  border-radius: 50%;
-  display: inline-block;
-  margin: 5px;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s, background-color 0.3s;
-  background-color: var(--yellow);
-}
-
-input[type="text"] {
-  flex: 1;
-  border-radius: 10px;
-  border: 2px solid var(--red);
-  font-size: 16px;
-  padding: 10px 20px;
-  margin-right: 500px;
-}
-
-input[type="text"]:focus {
-  outline: none;
-  border-color: var(--yellow);
-}
-
-.mainContent {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.welcome {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--red);
-  border-radius: 10px;
-  color: var(--white);
-  /*margin-bottom: 20px;*/
-  overflow: hidden;
-}
-
-.welcome h1, p {
-  margin-bottom: 10px;
-}
-
-.welcome h1, #p1 {
-  text-align: justify;
-  line-height: 1.6;
-}
-
-.welcome img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.leftText {
-  padding: 20px;
-  margin: 20px;
-  text-align: justify;
-}
-
-.card-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 10px;
-}
-
-.card {
-  background-color: var(--red);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  min-width: 200px;
-  text-align: center;
-}
-
-.chart-container {
-  width: 80%;
-  max-width: 800px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px var(--black-face);
-}
-
-.chart {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  height: 300px;
-  margin: 15px;
-}
-
-.bar {
-  width: 40px;
-  background-color: var(--red);
-  text-align: center;
+.nav-item a {
+  text-decoration: none;
   color: #fff;
-  font-size: 12px;
-  margin: 0 5px;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.nav-item.active a,
+.nav-item a:hover {
+  background-color: #2d0705;
+}
+
+.main-content {
+  width: 80%;
+  padding: 20px;
+  transition: width 0.3s ease-in-out;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #601a16;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
   position: relative;
 }
 
-.bar span {
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 14px;
-  color: #333;
-}
-
-.barHeader {
+.profile-settings {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.notifications {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.toggle-btn {
+  display: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
   text-align: center;
-  font-weight: bold;
+  width: 25%;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
+.stat-number {
+  font-size: 2em;
+  color: red;
+}
+
+.stat-label {
+  font-size: 1em;
+  color: #000;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
   .sidebar {
-    transform: translateX(-100%);
+      width: 100%;
+      transform: translateX(-100%);
+      position: absolute;
+      z-index: 1000;
   }
 
-  .sidebar.active {
-    transform: translateX(0);
+  .main-content {
+      width: 100%;
+      padding: 10px;
   }
 
-  .main {
-    margin-left: 0;
-  }
-
-  .sidebarToggle {
-    display: block;
-    color: var(--red);
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 20px;
-  }
-
-  .navbar {
-    flex-direction: row;
-    padding: 10px;
-  }
-
-  .rightNavBar {
-    margin-top: 10px;
-  }
-
-  .mainContent {
-    padding: 10px;
-  }
-
-  .card {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .welcome {
-    display: flex;
-    flex-direction: column;
+  .toggle-btn {
+      display: block;
   }
 }
+
 

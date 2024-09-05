@@ -1,71 +1,166 @@
 <app-header/>
-<div class="min-h-screen">
-  <section class="bg-primary-dark bg-cover bg-center text-white py-24">
-    <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-bold">Save Lives, One Donation at a Time</h1>
-      <p class="text-xl mt-4 text-secondary-light">Join our mission to ensure a reliable supply of safe blood</p>
-      <div class="mt-8">
-        <a href="#" class="bg-success text-white px-8 py-3 rounded-lg shadow-lg">Donate Now</a>
-        <a href="#"
-           class="ml-4 border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-primary-dark">Learn
-          More</a>
-      </div>
+
+<link rel="stylesheet" href="home.component.css">
+<body>
+<!--<header>-->
+<!--  <nav>-->
+<!--    <div class="logo">BLOOD BANK</div>-->
+<!--    <ul class="nav-links">-->
+<!--      <li><a href="#">Home</a></li>-->
+<!--      <li><a href="#">About</a></li>-->
+<!--      <li><a href="#">Contact</a></li>-->
+<!--    </ul>-->
+<!--    <div class="auth-buttons">-->
+<!--      <button class="login"><a routerLink="/sign-in">Login</a></button>-->
+<!--      <button class="signup"><a routerLink="/sign-up">Sign Up</a></button>-->
+<!--    </div>-->
+<!--  </nav>-->
+<!--</header>-->
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Give the Gift of Life: <br>Donate Blood Today</h1>
+    <p>Welcome to Blood Bank, where every donation helps save lives.</p>
+    <button class="cta-button"><a routerLink="/sign-up">Get started</a></button>
+  </div>
+  <div class="hero-image">
+    <img src="partners.png" alt="Blood donation illustration">
+  </div>
+</section>
+
+
+<section id="page2"></section>
+<section class="why-donate">
+  <h2>Why Donate Blood?</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-number">1</div>
+      <h3>Save Lives</h3>
+      <p>Your donation can help accident victims, surgery patients, and those battling cancer.</p>
     </div>
-  </section>
-
-  <section class="py-20 bg-secondary-light">
-    <h2 class="text-3xl text-primary-dark text-center mb-12">How It Works</h2>
-    <div class="container mx-auto flex flex-col md:flex-row md:space-x-6 space-y-8 md:space-y-0">
-      <div class="text-center p-8 bg-secondary-dark shadow-md rounded-lg flex-1">
-        <div class="text-2xl text-primary-dark">Step 1: Register</div>
-        <p class="text-secondary-light mt-2">User-friendly sign-up process.</p>
-      </div>
-      <div class="text-center p-8 bg-primary-dark text-white shadow-md rounded-lg flex-1">
-        <div class="text-2xl">Step 2: Donate</div>
-        <p class="text-secondary-light mt-2">Find a donation center or schedule a pickup.</p>
-      </div>
-      <div class="text-center p-8 bg-secondary-dark shadow-md rounded-lg flex-1">
-        <div class="text-2xl text-primary-dark">Step 3: Track</div>
-        <p class="text-secondary-light mt-2">Monitor your donations and impact.</p>
-      </div>
+    <div class="card">
+      <div class="card-number">2</div>
+      <h3>It's Quick and Easy</h3>
+      <p>The donation process takes only about an hour from start to finish.</p>
     </div>
-  </section>
-
-  <section class="bg-primary-dark text-white py-20">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl text-success mb-12">Your Impact</h2>
-      <div class="flex justify-around">
-        <div class="text-center">
-          <div class="text-4xl text-success font-bold">5000+</div>
-          <p class="text-secondary-light mt-2">Donations collected last month</p>
-        </div>
-        <div class="text-center">
-          <div class="text-4xl text-success font-bold">200+</div>
-          <p class="text-secondary-light mt-2">Hospitals partnered</p>
-        </div>
-        <div class="text-center">
-          <div class="text-4xl text-success font-bold">10,000+</div>
-          <p class="text-secondary-light mt-2">Lives saved</p>
-        </div>
-      </div>
+    <div class="card">
+      <div class="card-number">3</div>
+      <h3>Constant Need</h3>
+      <p>Every two seconds, someone in Cameroon needs blood.</p>
     </div>
-  </section>
-
-  <section class="py-20 bg-secondary-dark text-white">
-    <h2 class="text-3xl text-success text-center mb-12">What Our Donors Say</h2>
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-secondary-light shadow-lg p-6 rounded-lg">
-        <p class="text-secondary-dark italic">"Donating blood was a smooth and rewarding experience."</p>
-        <p class="text-success mt-4 text-lg">- John Doe</p>
-      </div>
+    <div class="card">
+      <div class="card-number">4</div>
+      <h3>You'll Feel Great</h3>
+      <p>There's no better feeling than knowing you've made a difference.</p>
     </div>
-  </section>
+  </div>
+</section>
+<section class="donation-process">
+  <div class="process-content">
+    <h2>What Happens to Your Donation?</h2>
+    <p>Your blood donation goes through careful testing and processing before being distributed to local hospitals and medical facilities. One donation can save up to three lives!</p>
+    <button class="donate-now"><a href="./donate.html">Donate now</a></button>
+  </div>
+  <div class="process-image">
+    <img src="donate2.png" alt="Blood Donation Testing">
+  </div>
+</section>
 
-  <section class="bg-gradient-to-r from-primary-dark to-primary text-white text-center py-20">
-    <h2 class="text-4xl">Become a Lifesaver Today</h2>
-    <p class="text-secondary-light mt-4">Sign up and make a difference now</p>
-    <a href="#" class="bg-success text-white px-8 py-4 rounded-lg shadow-xl mt-8 inline-block">Get Started</a>
-  </section>
+<section class="how-to-donate">
+  <h2>How to Donate</h2>
+  <div class="donation-steps">
+    <div class="donation-step">
+      <h3>1</h3>
+      <p>Check Eligibility: Most healthy adults can donate. Check our eligibility criteria to see if you qualify.</p>
+    </div>
+    <div class="donation-step">
+      <h3>2</h3>
+      <p>Schedule an Appointment: Use our online booking system or call us to set up a convenient time.</p>
+    </div>
+    <div class="donation-step">
+      <h3>3</h3>
+      <p>Prepare: Eat well and stay hydrated before your appointment.</p>
+    </div>
+    <div class="donation-step">
+      <h3>4</h3>
+      <p>Donate: Our friendly staff will guide you through the process and answer any questions you have.</p>
+    </div>
+  </div>
+  <div class="doctor-image">
+    <img src="../../../../public/doctor.jpg" alt="Doctor illustration">
+  </div>
+</section>
 
-  <app-footer/>
-</div>
+<section class="hospital-locations">
+  <h2>Select from a wide list of hospitals to do your donations</h2>
+  <div class="scrolling-container">
+    <div class="location-cards">
+      <div class="card">
+        <img src="img.png" alt="Yaounde Hospital">
+        <h3>YAOUNDE</h3>
+        <button class="learn-more">Learn more</button>
+      </div>
+      <div class="card">
+        <img src="../../../../public/bamenda%20regional.png" alt="Douala Hospital">
+        <h3>Central Hospital of Yaounde</h3>
+        <button class="learn-more">Learn more</button>
+      </div>
+      <div class="card">
+        <img src="yde%20general.png" alt="Yaounde Central Hospital">
+        <h3>Yaounde Central Hospital</h3>
+        <button class="learn-more">Learn more</button>
+      </div>
+      <div class="card">
+        <img src="jamot.png" alt="Hopital Jamot">
+        <h3>Hopital Jamot</h3>
+        <button class="learn-more">Learn more</button>
+      </div>
+      <div class="card">
+        <img src="chuy%20.png" alt="Central Hospital of Yaounde">
+        <h3>Central Hospital of Yaounde</h3>
+        <button class="learn-more">Learn more</button>
+      </div>
+      <div class="card">
+        <img src="img.png" alt="Hopital de la caisse">
+        <h3>Hopital de la caisse</h3>
+        <button class="learn-more">Learn more</button>
+      </div>
+      <div class="card">
+        <img src="bamenda%20regional.png" alt="Douala general  Hospital">
+        <h3>Douala general  Hospital</h3>
+        <button class="learn-more">Learn more</button>
+      </div>
+      <div class="card">
+        <img src="yde%20general.png" alt="Bamenda Hospital">
+        <h3>Bamenda general Hospital</h3>
+        <button class="learn-more">Learn more</button>
+      </div>
+      <div class="card">
+        <img src="jamot.png" alt="Yaounde Hospital">
+        <h3>Hopital Jamot</h3>
+        <button class="learn-more">Learn more</button>
+      </div>
+      <div class="card">
+        <img src="chuy%20.png" alt="Douala Hospital">
+        <h3>CHUY</h3>
+        <button class="learn-more">Learn more</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="community">
+  <div class="community-content">
+    <h2>Join Our Community of Heroes</h2>
+    <p>Regular donors are the lifeblood of our community. Sign up for our newsletter to stay informed about local blood drives and critical needs.</p>
+    <button class="donate-btn">Schedule Your Donation Today!</button>
+  </div>
+  <div class="community-image">
+    <img src="../../../../public/3doctors.png" alt="Community of Heroes Illustration">
+  </div>
+</section>
+<app-footer/>
+
+</body>
+

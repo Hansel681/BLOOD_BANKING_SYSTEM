@@ -18,9 +18,9 @@ exports.getBloodbank= async(req,res) => {
 }
 exports.addBloodbank = async(req,res) => {
     try {
-        let {name} =req.body;
+        let {name, hospitalid} =req.body;
         const bloodbank = await dbconnection.query(
-            "INSERT INTO bloodbank(name) VALUES(?)", [name]);
+            "INSERT INTO bloodbank(name, hospitalid) VALUES(?, ?)", [name, hospitalid]);
             res.status(201).send({
                 success: true,
                 data: bloodbank,
@@ -37,11 +37,15 @@ res.status(500).send({
 }
 exports.updateBloodbank= async(req,res) => {
     try {
-        let {name} =req.body;
+        let {name, hospitalid} =req.body;
         let id = req.query.id
         const bloodbank= await dbconnection.query(
-            "UPDATE Bloodbank SET name = ? WHERE id = ? ",
-             [name]
+            "UPDATE Bloodbank SET name = ?, hospitalid = ? WHERE id = ? ",
+             [name, hospitalid,  id]
+            );
+            const updateBloodbank = await dbconnection.query(
+                "SELECT * FROM bloodbank WHERE id = ?",
+                [id]
             );
             res.status(201).send({
                 success: true,

@@ -37,11 +37,15 @@ res.status(500).send({
 }
 exports.updateBloodbankcontent= async(req,res) => {
     try {
-        let {name} =req.body;
+        let {bloodgroupid, bloodbankid, date, isavailable} =req.body;
         let id = req.query.id
         const bloodbankcontent= await dbconnection.query(
-            "UPDATE Bloodbankcontent SET bloodgroupid = ?, bloodbankid = ?, date = ?, isavaialable = ? WHERE id = ? ",
-             [bloodgroupid, bloodbankid, date, isavailable]
+            "UPDATE bloodbankcontent SET bloodgroupid = ?, bloodbankid = ?, date = ?, isavailable = ? WHERE id = ? ",
+             [bloodgroupid, bloodbankid, date, isavailable, id]
+            );
+            const updateBloodbankcontent = await dbconnection.query(
+                "SELECT * FROM bloodbankcontent WHERE id = ?"
+                [id]
             );
             res.status(201).send({
                 success: true,
@@ -60,8 +64,8 @@ res.status(500).send({
 exports.deleteBloodbankcontent= async(req, res) => {
     try {
         let id = req.params.id;
-        const Bloodbankcontent = await dbconnection.query(
-            "DELETE FROM bloodbank WHERE id= ?",
+        const bloodbankcontent = await dbconnection.query(
+            "DELETE FROM bloodbankcontent WHERE id= ?",
              [id]
             );
         res.status(200).send({

@@ -20,7 +20,7 @@ exports.addBloodrequest = async(req,res) => {
     try {
         let {patientid, bloodbankid, requestdate, status} =req.body;
         const bloodrequest = await dbconnection.query(
-            "INSERT INTO bloodrequest(patientid, bloodbbankid, requestdate, status) VALUES(?, ?, ?, ?)", [patientid, bloodbankid, requestdate, status]);
+            "INSERT INTO Bloodrequest(patientid, bloodbankid, requestdate, status) VALUES(?, ?, ?, ?)", [patientid, bloodbankid, requestdate, status]);
             res.status(201).send({
                 success: true,
                 data: bloodrequest,
@@ -31,7 +31,7 @@ exports.addBloodrequest = async(req,res) => {
 res.status(500).send({
     success: false,
     data: [],
-    message: error,stack
+    message: error.stack
 });
     }
 }
@@ -40,8 +40,12 @@ exports.updateBloodrequest= async(req,res) => {
         let {patientid, bloodbankid, requestdate, status } =req.body;
         let id = req.query.id
         const bloodrequest= await dbconnection.query(
-            "UPDATE Bloodrequest SET patientid = ?,bloodbankid= ?, requestdate = ?, status = ? WHERE id = ? ",
+            "UPDATE bloodrequest SET patientid = ?, bloodbankid= ?, requestdate = ?, status = ? WHERE id = ?",
              [patientid, bloodbankid, requestdate, status]
+            );
+            const updateBloodrequest = await dbconnection.query(
+                "SELECT * FROM bloodrequest WHERE id = ?"
+                [id]
             );
             res.status(201).send({
                 success: true,
@@ -53,7 +57,7 @@ exports.updateBloodrequest= async(req,res) => {
 res.status(500).send({
     success: false,
     data: [],
-    message: error,stack
+    message: error.stack
 });
     }
 }
