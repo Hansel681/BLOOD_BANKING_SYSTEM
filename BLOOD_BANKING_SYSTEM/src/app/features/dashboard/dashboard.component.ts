@@ -39,6 +39,9 @@ export class DashboardComponent {
     {
       title: 'Management',
       routerLink: '/dashboard/management'
+    }, {
+      title: 'Management',
+      routerLink: '/dashboard/management'
     },
     {
       title: 'Settings',
