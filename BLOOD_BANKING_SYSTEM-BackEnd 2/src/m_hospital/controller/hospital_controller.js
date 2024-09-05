@@ -31,7 +31,7 @@ exports.addHospital = async(req,res) => {
 res.status(500).send({
     success: false,
     data: [],
-    message: error,stack
+    message: error.stack
 });
     }
 }
@@ -40,8 +40,12 @@ exports.updateHospital = async(req,res) => {
         let {name} =req.body;
         let id = req.query.id
         const hospital = await dbconnection.query(
-            "UPDATE hospital SET name = ?,  WHERE id = ? ",
+            "UPDATE hospital SET name = ?  WHERE id = ? ",
              [name, id]
+            );
+            const updateHospital= await dbconnection.query(
+                "SELECT * FROM hospital WHERE id = ?",
+                [id]
             );
             res.status(201).send({
                 success: true,
@@ -53,7 +57,7 @@ exports.updateHospital = async(req,res) => {
 res.status(500).send({
     success: false,
     data: [],
-    message: error,stack
+    message: error.stack
 });
     }
 }

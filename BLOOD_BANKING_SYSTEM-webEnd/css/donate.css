@@ -1,0 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.donate-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.donate-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.donate-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.donate-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.donate-container label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.donate-container select,
+.donate-container input,
+.donate-container textarea,
+.donate-container button {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.donate-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.donate-container button {
+    background-color: #6B0202;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.donate-container button:hover {
+    background-color: #c20808;
+}
+
+.hidden {
+    display: none;
+}
