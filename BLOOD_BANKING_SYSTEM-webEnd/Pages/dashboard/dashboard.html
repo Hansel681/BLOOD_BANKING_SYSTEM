@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="./../../css/dashboard/dashboard.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-</head>
-<!doctype html>
-<html class="no-js" lang="">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BloodAid</title>
-  <link rel="stylesheet" href="../../css/dashboard/dashboard.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Aid Dashboard</title>
+    <link rel="stylesheet" href="../../css/dashboard/dashboard.css">
 </head>
 <body>
- 
-<section class="sidebar">
-  <div class="logo">
-    
-    <span>Blood Aid</span>
-  </div>
-  
-  <ul>
-    <li id="homeLink" class="active">Home</li>
-    <li id="donateLink"><a href="../donate.html">Donate</li>
-      <li id="requestLink"><a href="../request.html">Request</li>
-    <li id="notificationsLink">Notifications</li>
-    <li id="requestLink">Request</li>
-    <li id="settingsLink">Setting</li>
-    <li id="helpLink">help</li>
-  </ul>
-  <div class="signOut">Sign Out</div>
-</section>
-<div class="main">
-  <section class="navbar">
-    <button id="sidebarToggle" class="sidebarToggle"> ☰</button>
-    <input type="text" placeholder="Search hospitals, Activity">
-    <div class="rightNavBar">
-      <div class="icon" <img src="../../img/profile.jpg"</img></div>
-      <div><span class="icon"></span></div>
-      <div><span class="icon"></span></div>
-      <div><span class="icon"></span></div>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <h2 class="logo">BLOOD AID</h2>
+            <nav class="nav">
+                <ul>
+                    <li class="nav-item active"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">Request</a></li>
+                    <li class="nav-item"><a href="#">Donate</a></li>
+                    <li class="nav-item"><a href="#">Sign-out</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1>Welcome back, Pride Ketu</h1>
+                <div class="profile-settings">
+                    <span class="notifications">2</span>
+                    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+                </div>
+                <button class="toggle-btn" id="toggleBtn">☰</button>
+            </header>
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Total request</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Total donations</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Total</span>
+                </div>
+            </div>
+        </main>
     </div>
-  </section>
-  <section class="mainContent">
-    <section class="welcome">
-      <h1>Welcome Back JOE</h1>
-      <p> Life In Every Drop</p>
-    </section>
-  </section>
-</div>
-<script src="./../../js/dashboard/dashboard.js">
 
-</script>
-
+    <script src="../../js/dashboard/dashboard.js"></script>
 </body>
 </html>

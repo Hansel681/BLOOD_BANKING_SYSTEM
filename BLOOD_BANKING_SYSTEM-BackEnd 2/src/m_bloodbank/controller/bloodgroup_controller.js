@@ -2,7 +2,8 @@ const dbconnection = require('../../database');
 
 exports.getBloodgroup= async(req,res) => {
     try {
-        const bloodgroup = await dbconnection.query('SELECT * FROM bloodgroup');
+        let name = req.body;
+                const bloodgroup = await dbconnection.query('SELECT id FROM bloodgroup ');
         res.status(200).send({
             success: true,
             data: bloodgroup [0],
@@ -20,7 +21,7 @@ exports.addBloodgroup = async(req,res) => {
     try {
         let {name} =req.body;
         const bloodgroup = await dbconnection.query(
-            "INSERT INTO bloodrequest(name) VALUES(?)", [name]);
+            "INSERT INTO bloodgroup(name) VALUES(?)", [name]);
             res.status(201).send({
                 success: true,
                 data: bloodgroup,
@@ -31,7 +32,7 @@ exports.addBloodgroup = async(req,res) => {
 res.status(500).send({
     success: false,
     data: [],
-    message: error,stack
+    message: error.stack
 });
     }
 }
@@ -41,7 +42,11 @@ exports.updateBloodgroup= async(req,res) => {
         let id = req.query.id
         const bloodgroup= await dbconnection.query(
             "UPDATE Bloodgroup SET name = ? WHERE id = ? ",
-             [name]
+             [name,id]
+            );
+            const updateBloodgroup = await dbconnection.query(
+                "SELECT * FROM bloodgroup WHERE id = ?",
+                [id]
             );
             res.status(201).send({
                 success: true,
@@ -53,7 +58,7 @@ exports.updateBloodgroup= async(req,res) => {
 res.status(500).send({
     success: false,
     data: [],
-    message: error,stack
+    message: error.stack
 });
     }
 }

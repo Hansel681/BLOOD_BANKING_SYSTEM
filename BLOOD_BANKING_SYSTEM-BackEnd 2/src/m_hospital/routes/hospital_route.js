@@ -8,6 +8,6 @@ route.post('/', hospital_controller.addHospital);
 
 route.put('/', hospital_controller.updateHospital);
 
-route.delete('/', hospital_controller.deleteHospital);
+route.delete('/:id', hospital_controller.deleteHospital);
 
 module.exports = route
