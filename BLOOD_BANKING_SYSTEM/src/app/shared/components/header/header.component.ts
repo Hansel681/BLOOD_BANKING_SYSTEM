@@ -19,13 +19,13 @@ export class HeaderComponent {
     },
     {
       id: 2,
-      link: '',
-      title: 'Bookings'
+      link: '/sign-up',
+      title: 'Sign Up'
     },
     {
       id: 3,
-      link: '',
-      title: 'About'
+      link: '/sign-in',
+      title: 'Sign In'
     },
     {
       id: 4,
