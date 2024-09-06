@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
-import {FullCalendarModule} from "@fullcalendar/angular";
-import {CalendarOptions} from "@fullcalendar/core";
-import dayGridPlugin from '@fullcalendar/daygrid';
+// import {FullCalendarModule} from "@fullcalendar/angular";
+// import {CalendarOptions} from "@fullcalendar/core";
+// import dayGridPlugin from '@fullcalendar/daygrid';
 import {Menu} from "./model/Menu";
 
 @Component({
@@ -11,41 +11,43 @@ import {Menu} from "./model/Menu";
   imports: [
     RouterOutlet,
     RouterLink,
-    FullCalendarModule,
+//     FullCalendarModule,
     RouterLinkActive
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
-  public calendarOptions: CalendarOptions = {
-    initialView: 'dayGridMonth',
-    plugins: [dayGridPlugin],
-    headerToolbar: {
-      left: '',
-      center: 'title',
-      right: ''
-    },
-    weekends: false,
-    viewClassNames: "h-full",
-  };
+//   public calendarOptions: CalendarOptions = {
+//     initialView: 'dayGridMonth',
+//     plugins: [dayGridPlugin],
+//     headerToolbar: {
+//       left: '',
+//       center: 'title',
+//       right: ''
+//     },
+//     weekends: false,
+//     viewClassNames: "h-full",
+//   };
 
 
   public menu: Menu[] = [
     {
       title: 'Dashboard',
-      routerLink: '/dashboard'
+      routerLink: '/dashboard',
     },
-    {
-      title: 'Management',
-      routerLink: '/dashboard/management'
-    }, {
-      title: 'Management',
-      routerLink: '/dashboard/management'
+
+  {
+      title: 'Request',
+      routerLink: '/dashboard/request'
     },
+   {
+        title: 'Donate',
+        routerLink: '/dashboard/donate'
+      },
     {
-      title: 'Settings',
-      routerLink: '/dashboard/settings'
-    }
+          title: 'Settings',
+          routerLink: '/dashboard/settings'
+        },
   ]
 }

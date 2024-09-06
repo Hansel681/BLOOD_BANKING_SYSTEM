@@ -1,0 +1,49 @@
+
+  <section class="info">
+    <h2>DONATE NOW !!</h2>
+
+  </section>
+
+  <section class="donate-form">
+    <h2>Donate Blood</h2>
+    <form action="/submit-donation" method="POST">
+      <label for="hospital">Select a Hospital:</label>
+      <select id="hospital" name="hospital" required>
+        <option value="" disabled selected>Select a hospital</option>
+        <option value="hospital1">Yaounde General Hospital </option>
+        <option value="hospital2">Etougebe Baptist Hospital </option>
+        <option value="hospital3">Hopital de la Caisse</option>
+        <option value="hospital3">CHUY Yaounde</option>
+        <!-- Add more hospitals as needed -->
+      </select>
+
+      <label for="bloodGroup">Select Your Blood Group:</label>
+      <select id="bloodGroup" name="bloodGroup" required>
+        <option value="" disabled selected>Select your blood group</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
+
+      <label for="weight">Your Weight (kg):</label>
+      <input type="number" id="weight" name="weight" step="0.1" required>
+
+      <label for="donorName">Your Name:</label>
+      <input type="text" id="donorName" name="donorName" required>
+
+      <label for="donorEmail">Your Email:</label>
+      <input type="email" id="donorEmail" name="donorEmail" required>
+
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
+
+<footer>
+  <p>Thank you for considering donating blood!</p>
+</footer>
+

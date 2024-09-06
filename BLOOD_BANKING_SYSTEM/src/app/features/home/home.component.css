@@ -236,6 +236,17 @@ body {
   background-color: #ffffff;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
 .donation-process {
   display: flex;
   justify-content: space-between;
@@ -272,8 +283,9 @@ body {
 }
 
 .process-image img {
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
   border-radius: 20px;
 }
 
@@ -290,16 +302,19 @@ body {
 .donation-steps {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .donation-step {
   background-color: #f7e4e4;
   padding: 20px;
-  width: 22%;
+  width: 100%;
+  max-width: 22%;
   border-radius: 10px;
   text-align: left;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .donation-step h3 {
@@ -314,22 +329,11 @@ body {
 }
 
 .doctor-image img {
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
   border-radius: 20px;
   margin-top: 40px;
-}
-
-
- *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background-color: #fff;
 }
 
 .hospital-locations {
@@ -356,10 +360,10 @@ body {
 
 @keyframes scroll {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
@@ -432,8 +436,53 @@ body {
 }
 
 .community-image img {
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
   border-radius: 20px;
 }
 
+@media (max-width: 1024px) {
+  .donation-process, .community {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .process-content, .community-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .process-image img, .community-image img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .donation-steps {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .donation-step {
+    max-width: 45%;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .donation-step {
+    max-width: 100%;
+  }
+
+  .hospital-locations, .how-to-donate, .community {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .donate-now, .donate-btn, .learn-more {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
